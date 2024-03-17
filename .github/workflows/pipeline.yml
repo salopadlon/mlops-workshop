@@ -67,7 +67,7 @@ jobs:
       - name: Set up Google Cloud SDK
         uses: google-github-actions/setup-gcloud@v0.2.1
         with:
-          project_id: mlops-tutorial
+          project_id: mlops-tutorial-417511
           service_account_key: ${{ secrets.GCP_SERVICE_ACCOUNT_KEY }}
           export_default_credentials: true
 
@@ -78,4 +78,4 @@ jobs:
             --platform managed \
             --region europe-west1 \
             --allow-unauthenticated \
-            --project mlops-tutorial
+            --project mlops-tutorial-417511
