@@ -21,7 +21,7 @@ class InputData(BaseModel):
 
 
 stage = "production"
-model_name = "turbine-model"
+model_name = "model-pavel"
 model = model_utils.load_model(model_name, stage)
 feature_names = model_utils.get_feature_names(model_name, stage)
 
@@ -42,7 +42,7 @@ async def predict(input_data: InputData):
 
     # Exercise: use the model to make predictions
     # ...
-    output = pd.Series(["TODO: implement me!"])  # replace this line
+    output = pd.Series(model.predict(X))  # replace this line
 
     return {"prediction": output.tolist()}
 
