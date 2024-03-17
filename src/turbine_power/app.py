@@ -40,8 +40,6 @@ async def predict(input_data: InputData):
     data = pd.DataFrame(input_data.model_dump())
     X = data[feature_names]
 
-    # Exercise: use the model to make predictions
-    # ...
     output = pd.Series(model.predict(X))  # replace this line
 
     return {"prediction": output.tolist()}
